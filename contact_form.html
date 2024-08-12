@@ -1,0 +1,17 @@
+{% extends 'master.html' %} {% load crispy_forms_tags%} {% block title %} SOTB -
+Contact {% endblock%} {% block content %}
+<div class="col-md-6 ms-5">
+  <div class="content-section">
+    <form method="POST">
+      {% csrf_token %}
+      <fieldset class="form-group">
+        <legend class="border-bottom mb-4"><h4>Get In Touch</h4></legend>
+        {{ form|crispy }}
+      </fieldset>
+      <div class="form-group">
+        <button class="btn btn-primary mt-2" type="submit">Send</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
